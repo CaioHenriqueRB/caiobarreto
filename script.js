@@ -32,18 +32,18 @@ function trocarIdioma() {
     // Tradução dos projetos (ajuste conforme a ordem dos cards)
     const projetos = document.querySelectorAll('.portfolio-card');
     if (projetos[0]) {
-      projetos[0].querySelector('h3').textContent = "Solo Link – Smart Irrigation with AI";
+      projetos[0].querySelector('h3').textContent = "🌱 Solo Link – Smart Irrigation with AI";
       projetos[0].querySelector('.portfolio-type').textContent = "AgroTech / Artificial Intelligence";
       projetos[0].querySelector('.portfolio-date').textContent = "April 2025";
       projetos[0].querySelector('p').textContent =
         "Underground sensor system and artificial intelligence that optimizes water use in irrigated agriculture. The app and proprietary sensors monitor soil moisture in depth and send real-time alerts, allowing the central pivot to irrigate only where necessary. Reduces costs, avoids waste, and brings precision to the field.";
     }
     if (projetos[1]) {
-      projetos[1].querySelector('h3').textContent = "Consortium Landing Page - Catalano Motos";
-      projetos[1].querySelector('.portfolio-type').textContent = "Consortium Landing Page";
-      projetos[1].querySelector('.portfolio-date').textContent = "March 2025";
+      projetos[1].querySelector('h3').textContent = "🌹 Personalized Website for My Girlfriend";
+      projetos[1].querySelector('.portfolio-type').textContent = "LoveTech / Customized Emotion";
+      projetos[1].querySelector('.portfolio-date').textContent = "March 2024";
       projetos[1].querySelector('p').textContent =
-        "Creation of a highly optimized landing page for Honda motorcycle consortia at Catalano Motos. Built with React and Tailwind CSS, focusing on performance, clean design, and advanced UX/UI principles to maximize conversions. Also managed paid traffic, achieving an average CPC of R$0.28 and CPA of R$7.50. The project resulted in 23 closed consortia, validating the funnel and strategy.";
+        "I created a fully personalized website as a romantic gift. The page displays our names, photos, a special message, and a counter showing how long we've been together — in years, months, days, hours, minutes, and seconds. It features a responsive design, an emotionally sensitive layout, and subtle animations. A project that blends coding with feeling.";
     }
     if (projetos[2]) {
       projetos[2].querySelector('h3').textContent = "BI Dashboard for Retail";
@@ -81,18 +81,18 @@ function trocarIdioma() {
 
     const projetos = document.querySelectorAll('.portfolio-card');
     if (projetos[0]) {
-      projetos[0].querySelector('h3').textContent = "Solo Link – Irrigação inteligente com IA";
+      projetos[0].querySelector('h3').textContent = "🌱 Solo Link – Irrigação inteligente com IA";
       projetos[0].querySelector('.portfolio-type').textContent = "AgroTech / Inteligência Artificial";
       projetos[0].querySelector('.portfolio-date').textContent = "Abril 2025";
       projetos[0].querySelector('p').textContent =
         "Sistema de sensores subterrâneos e inteligência artificial que otimiza o uso da água na agricultura irrigada. O app junto com os sensores de fabricação propria monitora a umidade do solo em profundidade e envia alertas em tempo real, permitindo que o pivô central irrige apenas onde é necessário. Reduz custos, evita desperdícios e traz precisão para o campo.";
     }
     if (projetos[1]) {
-      projetos[1].querySelector('h3').textContent = "Landing Page de Consórcio - Catalano Motos";
-      projetos[1].querySelector('.portfolio-type').textContent = "Landing Page de consórcio";
-      projetos[1].querySelector('.portfolio-date').textContent = "Março 2025";
+      projetos[1].querySelector('h3').textContent = "🌹 Site Personalizado para Minha Namorada";
+      projetos[1].querySelector('.portfolio-type').textContent = "LoveTech / Emoção Personalizada";
+      projetos[1].querySelector('.portfolio-date').textContent = "Março 2024";
       projetos[1].querySelector('p').textContent =
-        "Criação de uma landing page altamente otimizada para consórcios de motos Honda da Catalano Motos. Utilizei React e Tailwind CSS com foco total em performance, design clean e princípios avançados de UX/UI para maximizar conversões. Além do desenvolvimento, atuei na gestão de tráfego pago, atingindo um CPC médio de R$0,28 e CPA de R$7,50. O projeto resultou em 23 consórcios fechados, validando a eficácia do funil e da estratégia aplicada.";
+        "Criei um site 100% personalizado como presente romântico. A página exibe nosso nome, fotos, mensagem especial e um contador que mostra há quanto tempo estamos juntos — em anos, meses, dias, horas, minutos e segundos. Design responsivo, layout sensível ao toque emocional e animações sutis. Um projeto que une programação com sentimento.";
     }
     if (projetos[2]) {
       projetos[2].querySelector('h3').textContent = "Dashboard de BI para Varejo";
