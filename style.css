@@ -856,8 +856,6 @@ header {
   }
 }
 
-/* ...existing code... */
-
 /* Footer responsivo */
 @media (max-width: 900px) {
   .footer-bar {
@@ -951,12 +949,82 @@ header {
 }
 
 .portfolio-img {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 16px;
+  min-height: 360px; /* aumente conforme desejar, ex: 320px ou 360px */
   width: 100%;
-  height: 300px;
   background-size: cover;
-  background-position: top center;
-  border-radius: 1.2rem 1.2rem 0 0;
-  margin-bottom: 1.1rem;
+  background-position: center;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* Overlay cinza translúcido */
+.portfolio-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.7);
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.portfolio-img:hover::before {
+  opacity: 1;
+}
+
+/* Botão centralizado em branco */
+.portfolio-view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: none;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.25em;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.25s;
+  text-shadow: 0 2px 8px #222;
+}
+
+.portfolio-img:hover .portfolio-view-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ícone do GitHub no canto superior direito da imagem */
+.portfolio-github-link {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 3;
+  color: #fff;
+  background: rgba(34,34,34,0.85);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.portfolio-github-link:hover {
+  background: #fff;
+  color: #222;
+  text-decoration: none;
 }
 
 .portfolio-info {
@@ -969,6 +1037,7 @@ header {
   font-weight: 700;
   margin-bottom: 0.3rem;
   color: #222;
+  margin-top: 1.2rem; /* adicionado para afastar o título do topo */
 }
 
 .portfolio-type {
