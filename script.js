@@ -12,8 +12,22 @@ function trocarIdioma() {
   if (idiomaAtual === 'pt') {
     document.querySelector('.tag').textContent = "Hi, I'm Caio 👋🏼";
     document.querySelector('h1').innerHTML = "Technology and creativity<br />to transform ideas<br />into digital experiences.";
-    document.querySelector('.btn').textContent = "Contact me";
+    document.querySelector('.btn').innerHTML = `Contact me
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:inline;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="seta-gradient" x1="0" y1="0" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00d8ff"/>
+            <stop offset="1" stop-color="#0078d7"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 18L18 4" stroke="url(#seta-gradient)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M8 4H18V14" stroke="url(#seta-gradient)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
     btn.style.backgroundImage = "url('https://flagcdn.com/us.svg')";
+
+    // Tradução dos botões de copiar e currículo
+    document.querySelector('.email-copiar button').textContent = "Copy";
+    document.querySelector('.email + button, .email > button[hrref]').textContent = "Resume";
 
     // Tradução das seções principais
     document.querySelector('.sobre-mim-texto h2').textContent = "About me";
@@ -37,6 +51,10 @@ function trocarIdioma() {
       projetos[0].querySelector('.portfolio-date').textContent = "April 2025";
       projetos[0].querySelector('p').textContent =
         "Underground sensor system and artificial intelligence that optimizes water use in irrigated agriculture. The app and proprietary sensors monitor soil moisture in depth and send real-time alerts, allowing the central pivot to irrigate only where necessary. Reduces costs, avoids waste, and brings precision to the field.";
+      projetos[0].querySelector('.portfolio-view-btn').textContent = "View project";
+      projetos[0].querySelectorAll('.portfolio-github-link').forEach(link => {
+        link.setAttribute('title', 'View repository on GitHub');
+      });
     }
     if (projetos[1]) {
       projetos[1].querySelector('h3').textContent = "🌹 Personalized Website for My Girlfriend";
@@ -44,28 +62,36 @@ function trocarIdioma() {
       projetos[1].querySelector('.portfolio-date').textContent = "March 2024";
       projetos[1].querySelector('p').textContent =
         "I created a fully personalized website as a romantic gift. The page displays our names, photos, a special message, and a counter showing how long we've been together — in years, months, days, hours, minutes, and seconds. It features a responsive design, an emotionally sensitive layout, and subtle animations. A project that blends coding with feeling.";
+      projetos[1].querySelector('.portfolio-view-btn').textContent = "View project";
+      projetos[1].querySelectorAll('.portfolio-github-link').forEach(link => {
+        link.setAttribute('title', 'View repository on GitHub');
+      });
     }
-    if (projetos[2]) {
-      projetos[2].querySelector('h3').textContent = "BI Dashboard for Retail";
-      projetos[2].querySelector('.portfolio-type').textContent = "Business Intelligence";
-      projetos[2].querySelector('.portfolio-date').textContent = "January 2025";
-      projetos[2].querySelector('p').textContent =
-        "Development of an interactive dashboard for real-time sales and inventory analysis, using Python, Power BI, and ERP API integrations. The project provided strategic insights and automated reports for quick decision-making.";
-    }
-    if (projetos[3]) {
-      projetos[3].querySelector('h3').textContent = "Financial Reports Automation";
-      projetos[3].querySelector('.portfolio-type').textContent = "Automation & Python";
-      projetos[3].querySelector('.portfolio-date').textContent = "February 2025";
-      projetos[3].querySelector('p').textContent =
-        "Automation project for financial reports for a mid-sized company, using Python and integration with Google Sheets and banking APIs. The system reduced manual work time by 80%, ensuring accuracy and agility in decision-making.";
-    }
+
+    // Traduzir "Me fale sobre seu próximo projeto"
+    document.querySelector('.footer-topbar-content h2').innerHTML =
+      '<span style="font-weight:700;color:#222;">Tell me about your </span><span style="font-weight:700;color:#888;">next<br>project</span>';
 
     idiomaAtual = 'en';
   } else {
     document.querySelector('.tag').textContent = "Olá, sou Caio 👋🏼";
     document.querySelector('h1').innerHTML = "Tecnologia e criatividade<br />para transformar ideias<br />em experiências digitais.";
-    document.querySelector('.btn').textContent = "Entrar em contato";
+    document.querySelector('.btn').innerHTML = `Entrar em contato
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="display:inline;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="seta-gradient" x1="0" y1="0" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00d8ff"/>
+            <stop offset="1" stop-color="#0078d7"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 18L18 4" stroke="url(#seta-gradient)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M8 4H18V14" stroke="url(#seta-gradient)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
     btn.style.backgroundImage = "url('https://flagcdn.com/br.svg')";
+
+    // Botões de copiar e currículo em português
+    document.querySelector('.email-copiar button').textContent = "Copiar";
+    document.querySelector('.email + button, .email > button[hrref]').textContent = "Currículo";
 
     document.querySelector('.sobre-mim-texto h2').textContent = "Sobre mim";
     document.querySelectorAll('.sobre-mim-texto p')[0].textContent =
@@ -86,6 +112,10 @@ function trocarIdioma() {
       projetos[0].querySelector('.portfolio-date').textContent = "Abril 2025";
       projetos[0].querySelector('p').textContent =
         "Sistema de sensores subterrâneos e inteligência artificial que otimiza o uso da água na agricultura irrigada. O app junto com os sensores de fabricação propria monitora a umidade do solo em profundidade e envia alertas em tempo real, permitindo que o pivô central irrige apenas onde é necessário. Reduz custos, evita desperdícios e traz precisão para o campo.";
+      projetos[0].querySelector('.portfolio-view-btn').textContent = "Ver projeto";
+      projetos[0].querySelectorAll('.portfolio-github-link').forEach(link => {
+        link.setAttribute('title', 'Ver repositório no GitHub');
+      });
     }
     if (projetos[1]) {
       projetos[1].querySelector('h3').textContent = "🌹 Site Personalizado para Minha Namorada";
@@ -93,21 +123,14 @@ function trocarIdioma() {
       projetos[1].querySelector('.portfolio-date').textContent = "Março 2024";
       projetos[1].querySelector('p').textContent =
         "Criei um site 100% personalizado como presente romântico. A página exibe nosso nome, fotos, mensagem especial e um contador que mostra há quanto tempo estamos juntos — em anos, meses, dias, horas, minutos e segundos. Design responsivo, layout sensível ao toque emocional e animações sutis. Um projeto que une programação com sentimento.";
+      projetos[1].querySelector('.portfolio-view-btn').textContent = "Ver projeto";
+      projetos[1].querySelectorAll('.portfolio-github-link').forEach(link => {
+        link.setAttribute('title', 'Ver repositório no GitHub');
+      });
     }
-    if (projetos[2]) {
-      projetos[2].querySelector('h3').textContent = "Dashboard de BI para Varejo";
-      projetos[2].querySelector('.portfolio-type').textContent = "Business Intelligence";
-      projetos[2].querySelector('.portfolio-date').textContent = "Janeiro 2025";
-      projetos[2].querySelector('p').textContent =
-        "Desenvolvimento de dashboard interativo para análise de vendas e estoque em tempo real, utilizando Python, Power BI e integrações com APIs de ERPs. O projeto proporcionou insights estratégicos e automação de relatórios para tomada de decisão rápida.";
-    }
-    if (projetos[3]) {
-      projetos[3].querySelector('h3').textContent = "Automação de Relatórios Financeiros";
-      projetos[3].querySelector('.portfolio-type').textContent = "Automação & Python";
-      projetos[3].querySelector('.portfolio-date').textContent = "Fevereiro 2025";
-      projetos[3].querySelector('p').textContent =
-        "Projeto de automação de relatórios financeiros para uma empresa de médio porte, utilizando Python e integração com Google Sheets e APIs bancárias. O sistema reduziu em 80% o tempo gasto com tarefas manuais, garantindo precisão e agilidade na tomada de decisão.";
-    }
+
+    document.querySelector('.footer-topbar-content h2').innerHTML =
+      '<span style="font-weight:700;color:#222;">Me fale sobre seu </span><span style="font-weight:700;color:#888;">proximo<br>projeto</span>';
 
     idiomaAtual = 'pt';
   }
