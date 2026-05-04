@@ -29,7 +29,7 @@ function trocarIdioma() {
     document.querySelector('.email-copiar button').textContent = "Copy";
     document.querySelector('.email + button, .email > button[hrref]').textContent = "Resume";
 
-    // Tradução das seções principais
+    
     document.querySelector('.sobre-mim-texto h2').textContent = "About me";
     document.querySelectorAll('.sobre-mim-texto p')[0].textContent =
       "I'm Caio Barreto, a full-stack developer focused on creating digital solutions that deliver results. I work with web development, automations, and BI dashboards, always aiming to simplify processes and boost businesses.";
@@ -38,12 +38,12 @@ function trocarIdioma() {
     document.querySelectorAll('.sobre-mim-texto p')[2].textContent =
       "I believe technology is not about code, but about impact. That's what I seek in every project: to deliver value in a simple, strategic, and effective way.";
 
-    // Tradução do título e descrição do portfólio
+    
     document.querySelector('.portfolio-section h2').innerHTML = "<span style=\"font-weight:700;\">Selected</span> Works";
     document.querySelector('.portfolio-desc').textContent =
       "A collection of the most impactful projects, chosen to represent quality and dedication in every detail. Explore some of my best results.";
 
-    // Tradução dos projetos (ajuste conforme a ordem dos cards)
+    // Tradução dos projetos
     const projetos = document.querySelectorAll('.portfolio-card');
     if (projetos[0]) {
       projetos[0].querySelector('h3').textContent = "🌱 Solo Link – Smart Irrigation with AI";
@@ -68,7 +68,7 @@ function trocarIdioma() {
       });
     }
 
-    // Traduzir "Me fale sobre seu próximo projeto"
+    
     document.querySelector('.footer-topbar-content h2').innerHTML =
       '<span style="font-weight:700;color:#222;">Tell me about your </span><span style="font-weight:700;color:#888;">next<br>project</span>';
 
@@ -89,7 +89,7 @@ function trocarIdioma() {
       </svg>`;
     btn.style.backgroundImage = "url('https://flagcdn.com/br.svg')";
 
-    // Botões de copiar e currículo em português
+    
     document.querySelector('.email-copiar button').textContent = "Copiar";
     document.querySelector('.email + button, .email > button[hrref]').textContent = "Currículo";
 
@@ -136,7 +136,7 @@ function trocarIdioma() {
   }
 }
 
-// Carrossel animado de habilidades com logos
+
 const skills = [
   { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
@@ -144,8 +144,6 @@ const skills = [
   { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
   { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  // Símbolo de IA (exemplo: ícone do OpenAI)
-  { name: "IA", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" }
 ];
 
 function renderSkillsMarquee() {
@@ -154,9 +152,8 @@ function renderSkillsMarquee() {
   const track = carousel.querySelector('.skills-track');
   if (!track) return;
 
-  // Duplicar as habilidades várias vezes para garantir fluidez e largura suficiente
   let allSkills = [];
-  // Garante pelo menos 3x a largura da tela
+
   while (allSkills.length < 18) {
     allSkills = allSkills.concat(skills);
   }
@@ -167,17 +164,15 @@ function renderSkillsMarquee() {
     </div>`
   ).join('');
 
-  // Ajustar a animação dinamicamente conforme o tamanho do conteúdo
   setTimeout(() => {
     const trackWidth = track.scrollWidth;
-    const duration = Math.max(10, trackWidth / 80); // velocidade adaptativa
+    const duration = Math.max(10, trackWidth / 80);
     track.style.animationDuration = duration + "s";
   }, 100);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   renderSkillsMarquee();
-  // Define a bandeira inicial cobrindo todo o botão
   const btn = document.getElementById('btn-idioma');
   if (btn) btn.style.backgroundImage = "url('https://flagcdn.com/br.svg')";
   resetSkillsInterval();
